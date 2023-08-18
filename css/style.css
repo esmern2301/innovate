@@ -1,0 +1,919 @@
+body {
+    background-color: #fdfdfd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+:root {
+    --ColorGreen: #1BBF00;
+    --ColorBlue: #160C6D;
+    --darkBlue: #141135;
+    --colorGray: #4F585F;
+    --colorViolet: #726E9E;
+    --OpenSans: 'Open Sans', sans-serif;
+    --parprika: 'Paprika', cursive;
+    --nunito: 'Nunito', sans-serif;
+    --Quicksand: 'Quicksand', sans-serif;
+}
+
+.clrBlack {
+    color: black;
+}
+
+.clrBlue {
+    color: #160C6D;
+}
+
+.clrWhite {
+    color: white;
+}
+
+.clrViolet {
+    color: #726E9E;
+}
+
+.paragraph {
+    font-family: var(--parprika);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+
+.sub-heading {
+    font-family: var(--OpenSans);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--ColorBlue);
+
+}
+
+.mini-heading {
+    font-family: var(--OpenSans);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--darkBlue);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.button button {
+    font-family: var(--OpenSans);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 20px 40px;
+    border-radius: 100px;
+    text-transform: capitalize;
+    color: white;
+    border: 1px solid var(--ColorGreen);
+    background-color: transparent;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+.button button:hover {
+    background-color: var(--ColorGreen);
+}
+
+/* ==================
+        COMMON CSS END 
+    =================== */
+#navbar {
+    background-color: var(--ColorBlue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#navbar ul li a {
+    font-family: var(--OpenSans);
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    padding: 0 35px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#navbar ul li a:hover {
+    color: #1BBF00;
+}
+
+#navbar .nav-button button {
+    padding: 5px 30px;
+    background-color: var(--ColorGreen);
+    color: white;
+    font-family: var(--OpenSans);
+    font-weight: 600;
+    line-height: 50px;
+    font-size: 18px;
+    border: 2px solid var(--ColorGreen);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#navbar .nav-button button:hover {
+    background-color: transparent;
+    border: 2px solid var(--ColorGreen);
+}
+
+/* ==================
+        navbar CSS END 
+    =================== */
+#banner {
+    background: url(../img/banner.jpg) no-repeat center / cover;
+}
+
+#banner .overlay {
+    background-color: rgba(106, 98, 197, 0.7);
+    padding: 150px 0 250px;
+}
+
+#banner .overlay .content h1 {
+    font-family: var(--OpenSans);
+    font-size: 84px;
+    font-weight: 700;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#banner .overlay .content h4 {
+    font-family: var(--parprika);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+#banner .overlay .content .bannerBnt {
+    display: flex;
+    gap: 28px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+/* ==================
+        banner CSS END 
+    =================== */
+
+/* ==================
+        counter CSS END 
+    =================== */
+#counter {
+    padding: 280px 0;
+    position: relative;
+}
+
+#counter .content h3 {
+    font-family: var(--OpenSans);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 68px;
+    text-align: center;
+    color: var(--ColorGreen);
+}
+
+#counter .content h6 {
+    font-family: var(--OpenSans);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    color: #141135;
+    margin-top: 24px;
+    text-transform: capitalize;
+}
+
+#counter .line {
+    border-right: 3px solid #4F585F;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.counter_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* ==================
+        counter CSS END 
+    =================== */
+
+/* ==================
+        choose CSS start 
+    =================== */
+#choose {
+    padding: 90px 0;
+    position: relative;
+    background-color: #f0f0f3;
+}
+
+.choose_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#choose .content .left ul li p {
+    width: 319px;
+    position: relative;
+}
+
+
+#choose .content .left ul li {
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    width: 100%;
+    padding-left: 100px;
+    margin: 15px 0;
+}
+
+#choose .content .left ul li:hover {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+#choose .content .left ul li p::after {
+    content: "";
+    height: 25px;
+    width: 25px;
+    background-color: #CBC8F0;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+#choose .content .left ul li p::before {
+    content: "";
+    height: 25px;
+    width: 25px;
+    background-color: var(--ColorGreen);
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+#choose .content .right {
+    padding-left: 100px;
+}
+
+#choose .content .right .button button {
+    margin-top: 40px;
+    color: var(--ColorBlue);
+    border-color: var(--ColorBlue);
+}
+
+#choose .content .right .button button:hover {
+    color: white;
+    border-color: var(--ColorGreen);
+}
+
+/* ==================
+        choose part CSS END 
+    =================== */
+
+/* ==================
+        service part CSS start 
+    =================== */
+#service {
+    padding: 100px 0;
+    background-color: #F6F5FF;
+}
+
+#service .button button {
+    margin-top: 40px;
+    color: var(--ColorBlue);
+    border-color: var(--ColorBlue);
+}
+
+#service .button button:hover {
+    color: white;
+    border-color: var(--ColorGreen);
+}
+
+#service article {
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: relative;
+    z-index: 11;
+    overflow: hidden;
+}
+
+#service article:after {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #6B62C5;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    z-index: -1;
+}
+
+#service article:hover::after {
+    width: 100%;
+}
+
+#service article:hover .card-title {
+    color: white;
+}
+
+#service article:hover .paragraph {
+    color: white;
+}
+
+#service article:hover a {
+    color: #F4F4F5;
+}
+
+#service article:hover a::after {
+    background-color: white;
+    opacity: .3;
+}
+
+#service article .paragraph {
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+#service .bottom-item {
+    margin-top: 30px;
+}
+
+#service article .card-title {
+    font-family: var(--OpenSans);
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    line-height: 36px;
+    margin: 32px 0 16px 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.common_btn {
+    font-size: var(--OpenSans);
+    font-weight: 700;
+    font-size: 18px;
+    color: #141135;
+    margin-top: 28px;
+    line-height: 24px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    overflow: hidden;
+    z-index: 1;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.common_btn::after {
+    height: 100%;
+    width: 25%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(25, 191, 0, 0.467);
+    z-index: -1;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.common_btn:hover::after {
+    width: 100%;
+}
+
+/* ==================
+        service part CSS END 
+    =================== */
+
+/* ==================
+        impact part CSS start 
+    =================== */
+#impact {
+    padding: 100px 0;
+}
+
+#impact .impact-body article {
+    display: flex;
+    gap: 40px;
+}
+
+#impact .impact-body {
+    margin-top: 75px;
+}
+
+#impact .impact-body article:first-child {
+    margin-bottom: 40px;
+}
+
+#impact .impact-body .right .img {
+    display: flex;
+    gap: 35px;
+    position: relative;
+}
+
+#impact .impact-body .right .img .img3 {
+    position: absolute;
+    bottom: -137px;
+    right: 156px;
+}
+
+#impact .impact-body .right .img .dots {
+    position: absolute;
+    top: 53px;
+    right: 108px;
+}
+
+#impact .impact-body .right .img img {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/* ==================
+        impact part CSS END 
+    =================== */
+
+/* ==================
+        plan part CSS start 
+    =================== */
+#plan {
+    padding: 100px 0;
+    background-color: #f0f0f0;
+}
+
+#plan .plan-body {
+    margin-bottom: 65px;
+}
+
+#plan .mini-heading {
+    padding-top: 60px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+#plan main:hover .mini-heading {
+    color: white;
+}
+
+#plan .plan-body main {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: white;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+#plan .plan-body main:hover {
+    background-color: var(--ColorBlue);
+}
+
+#plan .plan-body {
+    margin-top: 64px;
+}
+
+#plan .plan-body main .img {
+    background-color: #f0f0f0;
+    text-align: center;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+#plan .plan-body main:hover .img {
+    background-color: var(--colorViolet);
+}
+
+#plan .plan-body main img {
+    width: 100%;
+}
+
+.emoji-last img {
+    width: 82% !important;
+    margin: 0 auto !important;
+}
+
+#plan .plan-body main .bottom-text h5 {
+    font-family: var(--nunito);
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 50px;
+    color: #1BBF00;
+    text-align: center;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+#plan .plan-body main .bottom-text h5:after {
+    position: absolute;
+    content: "$";
+    top: -13px;
+    left: 82px;
+    font-size: 24px;
+}
+
+#plan .plan-body main .bottom-text {
+    padding: 20px 60px 60px 60px;
+}
+
+#plan .plan-body main .bottom-text .paragraph {
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#plan .plan-body main:hover .bottom-text .paragraph {
+    color: white;
+}
+
+/* ==================
+        plan part CSS END 
+    =================== */
+
+/* ==================
+        review part CSS start 
+    =================== */
+    #review{
+        padding: 100px 0;
+        background-color: #F8F8FF;
+    }
+    #review .review_shape{
+        margin-top: 150px;
+    }
+    #review .review_shape article{
+        padding: 120px 156px;
+        background-color: white;
+        position: relative;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
+
+    #review .review_shape article .img{
+        height: 146px;
+        width: 146px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        position: absolute;
+        top: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+}
+
+#review .review_shape article .img img{
+    height: 100%;
+    width: 100%;
+}
+
+#review .review_shape article .star{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+#review .review_shape article .star i{
+    color: #FF7628;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+#review .review_shape article p{
+    font-family: var(--parprika);
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 400;
+    text-align: center;
+    color: #6B62C5;
+    margin-bottom: 48px;
+}
+
+#review .review_shape article .name-designation h5{
+    font-family: var(--OpenSans);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #221A2C;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#review .review_shape article .name-designation h6{
+    font-family: var(--parprika);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--colorViolet);
+    text-align: center;
+}
+
+#review .review_shape article .arrow{
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #1BBF00;
+    opacity: .4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+#review .review_shape article .arrow:hover{
+    opacity: 1;
+}
+
+#review .review_shape article .arrow i{
+    font-size: 30px;
+    color: white;
+}
+
+#review .review_shape article .prevarrow{
+    left: -130px;
+}
+#review .review_shape article .nextarrow{
+    right: -130px;
+}
+/* ==================
+        review part CSS END 
+    =================== */
+
+/* ==================
+        also like part CSS start 
+    =================== */
+#alsoLike{
+    padding: 100px 0;
+}
+#alsoLike .alsoLike_body{
+    margin-top: 64px;
+}
+#alsoLike .shape{
+    height: 220px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #C4C4C4;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#alsoLike .alsoLike_body ul li a{
+    font-family: var(--Quicksand);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--colorViolet);
+    text-transform: capitalize;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+#alsoLike .alsoLike_body ul li a:hover{
+    color: var(--ColorGreen);
+}
+
+#alsoLike .alsoLike_body ul{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+#alsoLike .alsoLike_body .details{
+    padding-left: 50px;
+}
+
+#alsoLike .alsoLike_body .spclItem{
+    margin-bottom: 60px;
+}
+
+#alsoLike .alsoLike_body h4{
+    font-family: var(--OpenSans);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 55px;
+}
+/* ==================
+        also like part CSS END 
+    =================== */
+
+/* ==================
+        footer part CSS start 
+    =================== */
+    #footer{
+        background-color: #48409C;
+    }
+
+    #footer .footer_top{
+        padding: 100px 0 80px 0;
+    }
+    #footer .footer_top .footer-pera{
+        font-family: var(--nunito);
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #fefefe;
+        margin-top: 44px;
+    }
+
+    #footer .footer_top .footer_mini_heading{
+        font-family: var(--OpenSans);
+        font-size: 24px;
+        font-weight: 600;
+        color: #fefefe;
+        margin-bottom: 48px;
+    }
+
+    #footer .footer_top ul li a{
+        font-family: var(--nunito);
+        font-size: 20px;
+        font-weight: 600;
+        color: #fefefe;
+        margin: 15px 0;
+    }
+
+    #footer .footer_bottom{
+        padding-bottom: 60px;
+    }
+    #footer .footer_bottom p{
+        font-family: var(--nunito);
+        font-size: 18px;
+        font-weight: 400;
+        color: #fefefe;
+    }
+
+    #footer .footer_bottom{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .privacy_terms{
+        display: flex;
+        gap: 60px;
+    }
+/* ==================
+        footer part CSS END 
+    =================== */
